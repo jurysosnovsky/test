@@ -16,7 +16,7 @@ class FromRequest implements BaseInterface
 
     public function build(): CountryValueInterface
     {
-        return new CountryValue($this->requestStack->getCurrentRequest()->query->get('country'));
+        return new CountryValue($this->requestStack->getCurrentRequest()->request->get('country'));
     }
 
 }
